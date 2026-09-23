@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Television</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header class="navbar">
+        
+        <div class="logo-container"
+             onclick="goToPage('index.html')">
+
+            <img src="Asset/powericon.png"
+                 alt="Power logo"
+                 class="logo">
+        </div>
+
+        <nav>
+            <button
+                onclick="goToPage('index.html')"
+                class="nav-link active">
+
+                Home
+
+            </button>
+
+            <button
+                onclick="goToPage('televisions.html')"
+                class="nav-link">
+
+                Televisions
+
+            </button>
+
+            <button
+                onclick="goToPage('about.html')"
+                class="nav-link">
+
+                About Us
+
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="small-heading">
+                    AUSTRALIAN APPLIANCE ENERGY GUIDE
+                </p>
+
+                <h1>
+                    Understand Your<br>
+                    Energy Consumption
+                </h1>
+
+                <p>
+                    Explore how household appliances such as
+                    televisions contribute to energy consumption
+                    and electricity costs in the Australian market.
+                </p>
+                
+                <!--
+                    This button takes the user directly
+                    to the Televisions page.
+
+                    JavaScript is used to perform the navigation.
+                -->
+                <button
+                    class="primary-button"
+                    onclick="goToPage('televisions.html')">
+
+                    Explore Televisions
+                </button>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>
+                Energy Consumption in Australian Homes
+            </h2>
+
+            <p>
+                Household appliances play an important role
+                in everyday life, but they also contribute to
+                household electricity consumption.
+                Understanding how much energy an appliance uses
+                can help consumers make more informed
+                purchasing decisions.
+            </p>
+
+            <div class="card-container">
+                <div class="info-card">
+                    <h3>
+                        Energy Efficiency
+                    </h3>
+
+                    <p>
+                        Energy-efficient appliances can help
+                        reduce electricity consumption while
+                        still providing the required level
+                        of performance.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>
+                        Electricity Costs
+                    </h3>
+
+                    <p>
+                        The amount of electricity an appliance
+                        consumes can affect the overall cost
+                        of running a household.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>
+                        Smart Choices
+                    </h3>
+
+                    <p>
+                        Comparing energy ratings and expected
+                        consumption can help Australian consumers
+                        choose suitable appliances.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © 2026 [Steve] |
+
+            Appliance Energy Consumption Guide |
+
+            GenAI acknowledgement:
+            ChatGPT was used to assist with code
+            and content generation.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

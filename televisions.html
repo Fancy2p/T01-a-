@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--
+        Defines the character encoding used by the webpage.
+    -->
+    <meta charset="UTF-8">
+
+
+    <!--
+        Makes the website responsive on different devices.
+    -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+
+    <!--
+        Title shown on the browser tab.
+    -->
+    <title>EnergyWise - Televisions</title>
+
+
+    <!--
+        Connects this HTML page to the CSS stylesheet.
+    -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!--
+        =====================================================
+        NAVIGATION BAR
+        =====================================================
+    -->
+
+    <header class="navbar">
+
+
+        <!--
+            Power logo.
+
+            Clicking the logo takes the user back
+            to the Home page.
+        -->
+        <div class="logo-container"
+             onclick="goToPage('index.html')">
+
+            <img src="Asset/powericon.png"
+                 alt="Power logo"
+                 class="logo">
+
+        </div>
+
+
+        <!--
+            Navigation menu containing the three pages.
+        -->
+        <nav>
+
+
+            <!--
+                Home navigation button.
+            -->
+            <button
+                onclick="goToPage('index.html')"
+                class="nav-link">
+
+                Home
+
+            </button>
+
+
+            <!--
+                Televisions navigation button.
+
+                "active" tells the CSS that this is
+                the current page.
+            -->
+            <button
+                onclick="goToPage('televisions.html')"
+                class="nav-link active">
+
+                Televisions
+
+            </button>
+
+
+            <!--
+                About Us navigation button.
+            -->
+            <button
+                onclick="goToPage('about.html')"
+                class="nav-link">
+
+                About Us
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!--
+        =====================================================
+        MAIN CONTENT
+        =====================================================
+    -->
+
+    <main>
+
+
+        <!--
+            Page header.
+
+            This introduces the purpose of the
+            Televisions page.
+        -->
+        <section class="page-header">
+
+
+            <!--
+                Small label above the main heading.
+            -->
+            <p class="small-heading">
+                APPLIANCE INFORMATION
+            </p>
+
+
+            <!--
+                Main heading.
+            -->
+            <h1>
+                Television Energy Consumption
+            </h1>
+
+
+            <!--
+                Short description.
+            -->
+            <p>
+                Learn about the factors that influence
+                television electricity consumption
+                in Australian households.
+            </p>
+
+        </section>
+
+
+
+        <!--
+            =================================================
+            TELEVISION INFORMATION
+            =================================================
+        -->
+
+        <section class="content-section">
+
+
+            <h2>
+                How Much Energy Does a Television Use?
+            </h2>
+
+
+            <p>
+                Television energy consumption can vary
+                depending on factors such as screen size,
+                display technology, brightness settings,
+                usage time and standby behaviour.
+            </p>
+
+
+
+            <!--
+                Three cards explaining different factors
+                that affect television energy consumption.
+            -->
+            <div class="card-container">
+
+
+                <!--
+                    CARD 1:
+                    Screen size.
+                -->
+                <div class="info-card">
+
+                    <h3>
+                        Screen Size
+                    </h3>
+
+                    <p>
+                        Larger televisions generally require
+                        more energy to operate than smaller
+                        models, although efficiency varies
+                        between individual products.
+                    </p>
+
+                </div>
+
+
+
+                <!--
+                    CARD 2:
+                    Display technology.
+                -->
+                <div class="info-card">
+
+                    <h3>
+                        Display Technology
+                    </h3>
+
+                    <p>
+                        Different display technologies can
+                        have different electricity consumption
+                        characteristics.
+                    </p>
+
+                </div>
+
+
+
+                <!--
+                    CARD 3:
+                    Usage time.
+                -->
+                <div class="info-card">
+
+                    <h3>
+                        Usage Time
+                    </h3>
+
+                    <p>
+                        A television that is used for several
+                        hours each day will generally consume
+                        more electricity over a year than one
+                        used less frequently.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--
+            =================================================
+            TELEVISION COMPARISON TABLE
+            =================================================
+        -->
+
+        <section class="content-section">
+
+
+            <h2>
+                Example Television Comparison
+            </h2>
+
+
+            <p>
+                The following figures are illustrative examples
+                for demonstrating how television energy
+                consumption can be compared.
+            </p>
+
+
+            <!--
+                The table is placed inside a container.
+
+                The container allows the table to scroll
+                horizontally on smaller screens.
+            -->
+            <div class="table-container">
+
+
+                <table>
+
+
+                    <!--
+                        THEAD contains the table headings.
+                    -->
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Television
+                            </th>
+
+                            <th>
+                                Screen Size
+                            </th>
+
+                            <th>
+                                Example Power
+                            </th>
+
+                            <th>
+                                Usage
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <!--
+                        TBODY contains the actual table data.
+                    -->
+                    <tbody>
+
+
+                        <!-- First television -->
+                        <tr>
+
+                            <td>
+                                Model A
+                            </td>
+
+                            <td>
+                                43"
+                            </td>
+
+                            <td>
+                                70 W
+                            </td>
+
+                            <td>
+                                4 hours/day
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Second television -->
+                        <tr>
+
+                            <td>
+                                Model B
+                            </td>
+
+                            <td>
+                                55"
+                            </td>
+
+                            <td>
+                                100 W
+                            </td>
+
+                            <td>
+                                4 hours/day
+                            </td>
+
+                        </tr>
+
+
+                        <!-- Third television -->
+                        <tr>
+
+                            <td>
+                                Model C
+                            </td>
+
+                            <td>
+                                65"
+                            </td>
+
+                            <td>
+                                130 W
+                            </td>
+
+                            <td>
+                                4 hours/day
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!--
+        =====================================================
+        FOOTER
+        =====================================================
+    -->
+
+    <footer>
+
+        <p>
+
+            © 2026 [Steve] |
+
+            Appliance Energy Consumption Guide |
+
+            GenAI acknowledgement:
+            ChatGPT was used to assist with code
+            and content generation.
+
+        </p>
+
+    </footer>
+
+
+
+    <!--
+        Connects the page to the JavaScript file.
+    -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

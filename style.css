@@ -1,0 +1,790 @@
+/* =========================================================
+   GENERAL WEBSITE SETTINGS
+   ========================================================= */
+
+
+/*
+    The * means "select every element".
+
+    margin: 0 removes the default space around elements.
+
+    padding: 0 removes the default internal space.
+
+    box-sizing: border-box makes width and height calculations
+    easier because padding and borders are included in the
+    element's total size.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+    These are the general settings for the entire webpage.
+
+    font-family controls the font.
+
+    background-color controls the background colour.
+
+    color controls the normal text colour.
+
+    line-height controls the spacing between lines of text.
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #fffdf5;
+
+    color: #292929;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   NAVIGATION BAR
+   ========================================================= */
+
+
+/*
+    .navbar selects any HTML element with:
+
+        class="navbar"
+
+    display: flex allows the logo and navigation menu
+    to be positioned next to each other.
+
+    justify-content: space-between puts the logo on the
+    left and navigation menu on the right.
+
+    background-color makes the navigation bar dark.
+
+    border-bottom creates the yellow line underneath it.
+*/
+.navbar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 12px 7%;
+
+    background-color: #242424;
+
+    border-bottom: 4px solid #f5c400;
+
+    /*
+        Keeps the navigation bar visible near the top
+        when the user scrolls.
+    */
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+
+/*
+    Controls the container around the power logo.
+*/
+.logo-container {
+    display: flex;
+
+    align-items: center;
+
+    /*
+        Changes the mouse cursor to a pointer when
+        the user moves over the logo.
+
+        This gives feedback that the logo is clickable.
+    */
+    cursor: pointer;
+
+    /*
+        Makes the logo smoothly change size
+        when hovered over.
+    */
+    transition: transform 0.2s ease;
+}
+
+
+
+/*
+    Controls the actual power icon image.
+*/
+.logo {
+    width: 48px;
+
+    height: 48px;
+
+    /*
+        Makes sure the image fits properly inside
+        its defined width and height.
+    */
+    object-fit: contain;
+}
+
+
+
+/*
+    When the user moves the mouse over the logo,
+    slightly increase its size.
+
+    This provides mouse-over feedback.
+*/
+.logo-container:hover {
+    transform: scale(1.08);
+}
+
+
+
+/* =========================================================
+   NAVIGATION MENU
+   ========================================================= */
+
+
+/*
+    The navigation menu contains the three buttons.
+*/
+nav {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+
+/*
+    Styling for each navigation button.
+*/
+.nav-link {
+    /*
+        Removes the default button border.
+    */
+    border: none;
+
+    /*
+        Makes the background transparent so that
+        the dark navigation bar can be seen.
+    */
+    background: transparent;
+
+    /*
+        Makes the navigation text white.
+    */
+    color: white;
+
+    padding: 10px 18px;
+
+    font-size: 16px;
+
+    /*
+        Changes the mouse cursor to a pointer.
+    */
+    cursor: pointer;
+
+    border-radius: 6px;
+
+    /*
+        Makes colour changes happen smoothly.
+    */
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+
+/*
+    :hover means:
+
+    "when the mouse is over this element"
+
+    The navigation button becomes yellow when
+    the user moves the mouse over it.
+
+    This satisfies the mouse-over feedback requirement.
+*/
+.nav-link:hover {
+    background-color: #f5c400;
+
+    color: #242424;
+}
+
+
+
+/*
+    .active is used to show the page the user
+    is currently viewing.
+
+    For example, on televisions.html:
+
+        class="nav-link active"
+
+    makes the Televisions button yellow.
+*/
+.nav-link.active {
+    background-color: #f5c400;
+
+    color: #242424;
+
+    font-weight: bold;
+}
+
+
+
+/* =========================================================
+   HOME PAGE HERO SECTION
+   ========================================================= */
+
+
+/*
+    .hero controls the large introduction section
+    on the Home page.
+*/
+.hero {
+    /*
+        Makes the section at least 560 pixels tall.
+    */
+    min-height: 560px;
+
+    /*
+        Uses Flexbox to position the content.
+    */
+    display: flex;
+
+    align-items: center;
+
+    /*
+        Adds space around the content.
+    */
+    padding: 70px 10%;
+
+    /*
+        Creates a yellow/cream gradient.
+
+        This gives the website its yellow theme without
+        making the entire page bright yellow.
+    */
+    background:
+        linear-gradient(
+            135deg,
+            #fff8cf 0%,
+            #fffdf5 60%,
+            #f5c400 100%
+        );
+}
+
+
+
+/*
+    Controls the width of the text inside the hero section.
+*/
+.hero-content {
+    max-width: 700px;
+}
+
+
+
+/*
+    Small heading used above the main heading.
+*/
+.small-heading {
+    color: #9a7900;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    /*
+        Adds extra spacing between letters.
+    */
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+
+/*
+    Controls the large headings.
+
+    clamp() allows the heading size to change
+    depending on the size of the screen.
+*/
+.hero h1,
+.page-header h1 {
+
+    font-size: clamp(38px, 6vw, 68px);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    color: #242424;
+}
+
+
+
+/*
+    Controls the paragraph inside the Home hero.
+*/
+.hero p:not(.small-heading) {
+
+    font-size: 19px;
+
+    max-width: 650px;
+
+    margin-bottom: 30px;
+}
+
+
+
+/* =========================================================
+   MAIN BUTTON
+   ========================================================= */
+
+
+/*
+    Styles the "Explore Televisions" button.
+*/
+.primary-button {
+
+    background-color: #f5c400;
+
+    color: #242424;
+
+    border: none;
+
+    padding: 14px 24px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+
+/*
+    Changes the button when the mouse moves over it.
+*/
+.primary-button:hover {
+
+    background-color: #d9ad00;
+
+    /*
+        Moves the button slightly upwards.
+    */
+    transform: translateY(-2px);
+}
+
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+
+/*
+    Used at the top of the Televisions and About Us pages.
+*/
+.page-header {
+
+    text-align: center;
+
+    padding: 90px 10% 70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8cf,
+            #fffdf5
+        );
+}
+
+
+
+/*
+    Controls the main heading on these pages.
+*/
+.page-header h1 {
+
+    font-size: clamp(38px, 6vw, 60px);
+}
+
+
+
+/*
+    Controls the description underneath the page heading.
+*/
+.page-header p:not(.small-heading) {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    font-size: 18px;
+}
+
+
+
+/* =========================================================
+   CONTENT SECTIONS
+   ========================================================= */
+
+
+/*
+    Controls the main content sections.
+
+    max-width prevents the text from becoming too wide
+    on large monitors.
+
+    margin: 0 auto centres the section.
+*/
+.content-section {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 70px 30px;
+}
+
+
+
+/*
+    Controls section headings such as:
+
+        Energy Consumption in Australian Homes
+        How Much Energy Does a Television Use?
+        About Us
+*/
+.content-section h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+
+    color: #242424;
+}
+
+
+
+/*
+    Controls normal paragraphs inside content sections.
+*/
+.content-section > p {
+
+    margin-bottom: 20px;
+
+    max-width: 900px;
+
+    color: #555;
+}
+
+
+
+/* =========================================================
+   INFORMATION CARDS
+   ========================================================= */
+
+
+/*
+    .card-container contains all of the information cards.
+*/
+.card-container {
+
+    /*
+        CSS Grid makes it easy to create columns.
+    */
+    display: grid;
+
+    /*
+        Creates three equal-sized columns.
+    */
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 35px;
+}
+
+
+
+/*
+    Controls the appearance of each information card.
+*/
+.info-card {
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    /*
+        Creates a yellow line across the top
+        of each card.
+    */
+    border-top: 5px solid #f5c400;
+
+    /*
+        Creates a subtle shadow underneath the card.
+    */
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    /*
+        Makes the hover animation smooth.
+    */
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+
+/*
+    When the mouse moves over a card:
+
+    1. The card moves slightly upwards.
+    2. Its shadow becomes stronger.
+
+    This provides visual feedback.
+*/
+.info-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+
+/*
+    Heading inside an information card.
+*/
+.info-card h3 {
+
+    margin-bottom: 12px;
+
+    color: #242424;
+}
+
+
+
+/*
+    Paragraph inside an information card.
+*/
+.info-card p {
+
+    color: #666;
+}
+
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+
+/*
+    This container surrounds the table.
+
+    overflow-x: auto means the table can scroll
+    horizontally if the screen is too small.
+*/
+.table-container {
+
+    overflow-x: auto;
+
+    margin-top: 30px;
+}
+
+
+
+/*
+    Makes the table use the entire available width.
+*/
+table {
+
+    width: 100%;
+
+    /*
+        Removes the spaces between table borders.
+    */
+    border-collapse: collapse;
+
+    background-color: white;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+
+/*
+    Styles the table header.
+*/
+thead {
+
+    background-color: #242424;
+
+    color: white;
+}
+
+
+
+/*
+    Controls the spacing inside table cells.
+*/
+th,
+td {
+
+    padding: 16px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+/*
+    When the mouse moves over a table row,
+    the background becomes light yellow.
+*/
+tbody tr:hover {
+
+    background-color: #fff8cf;
+}
+
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+
+/*
+    Controls the footer at the bottom of every page.
+*/
+footer {
+
+    background-color: #242424;
+
+    color: #ddd;
+
+    text-align: center;
+
+    padding: 25px 10%;
+
+    /*
+        Yellow line matching the website theme.
+    */
+    border-top: 4px solid #f5c400;
+
+    font-size: 14px;
+}
+
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/*
+    This section changes the website when the screen
+    becomes smaller than 768 pixels.
+
+    This is useful for tablets and mobile devices.
+*/
+@media (max-width: 768px) {
+
+
+    /*
+        Changes the navigation bar from horizontal
+        to vertical.
+    */
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+
+
+    /*
+        Allows navigation buttons to move onto
+        multiple lines if necessary.
+    */
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+
+    /*
+        Reduces the padding on the Home hero section
+        for smaller screens.
+    */
+    .hero {
+
+        padding: 60px 7%;
+    }
+
+
+
+    /*
+        Changes the three information cards into
+        one column.
+
+        Instead of:
+
+        Card 1 | Card 2 | Card 3
+
+        the mobile version becomes:
+
+        Card 1
+        Card 2
+        Card 3
+    */
+    .card-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+
+    /*
+        Reduces content spacing on smaller screens.
+    */
+    .content-section {
+
+        padding: 50px 20px;
+    }
+
+}
